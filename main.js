@@ -1,5 +1,5 @@
 const app = vue.createApp({
-    data: function() {
+    data() {
         return {
             name:"Pizza Royale",
             price:12
