@@ -1,0 +1,379 @@
+/* générale */
+body
+{
+    margin:0;
+    padding:0;
+}
+
+.row 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    margin:0;
+    padding:0;
+    width: 100%;
+}
+
+.col-product
+{
+    margin:0;
+    padding:0;
+    width: 75%;
+}
+
+.col-order
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    padding:0;
+    width: 25%;
+}
+
+.flex-end
+{
+    justify-content:flex-end;
+    align-items: end;
+    height: 100px;
+}
+
+.product-section
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap:wrap;
+    border-radius: 10px;
+    box-shadow: 0 0 2rem rgba(128, 128, 128, 0.25);
+    margin: 30px 15px 30px 30px;
+    height: 100%;
+}
+
+.product-order
+{
+    display:block;
+    border-radius: 10px;
+    box-shadow: 0 0 2rem rgba(128, 128, 128, 0.25);
+    margin: 30px 30px 30px 15px;
+    width: calc(100% - 60px);
+    height: 100%;
+}
+
+
+/*image pizza */
+
+.container-image
+{
+    width: 50%;
+}
+
+.container-image img
+{
+   display:block;
+   width: calc(100% - 45px);
+   margin: 30px 15px 30px 30px;
+   border-radius: 10px;
+}
+
+/*description pizza */
+
+.container-description
+{
+    width: 50%;
+}
+
+.product-description
+{
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin:30px 30px 30px 15px;
+    padding: 0px 30px;
+}
+
+.product-description > strong 
+{
+    display:block;
+    margin-bottom: 0.1rem;
+}
+
+.sauces li 
+{
+    display:block;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px 15px;
+    line-height: 20px;
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+/* solde pizza */
+
+.sale
+{
+    text-decoration: line-through;
+    padding-right:0.3rem;
+}
+
+.price
+{
+    color: red;
+    font-weight:bold;
+}
+
+.new-price
+{
+    color: red;
+    text-decoration: underline;
+    font-weight:bold;
+}
+
+
+/* bouton commande pizza */
+
+.btn-commande
+{
+    display:block;
+    background-color: red;
+    color:white;
+    font-size: 20px;
+    line-height: 20px;
+    border-radius: 10px;
+    padding: 15px 30px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+}
+
+.notActiveBtn {
+    background-color: #f6f6f6;
+    border-color: #f6f6f6;
+    color: gray;
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+.notActiveBtn:hover
+{
+    background-color: #f6f6f6;
+}
+
+
+/*tableau commande*/
+
+.container-table
+{
+    padding: 30px;
+    width: calc(100% - 60px);
+    height: 100%;
+}
+
+table 
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.titleArray
+{
+    text-align: center;
+}  
+
+td, th 
+{
+    border: 1px solid #000;
+    text-align: left;
+    padding: 8px;
+}
+
+td 
+{
+    width: 50%;
+}
+
+.code-promo > input
+{
+    border-width: 0px;
+    width: 100%;
+}
+
+
+
+/*Transition prix promo*/
+
+.bounce-enter-active {
+    animation: bounce-in 0.5s;
+}
+
+@keyframes bounce-in {
+    
+    0% {
+        transform:scale(0);
+    }
+    50% {
+        transform:scale(1.25);
+    }
+    100% {
+        transform:scale(1);
+    }
+}
+
+
+/* Admin box */
+
+.product-admin
+{
+    display:block;
+    border-radius: 10px;
+    box-shadow: 0 0 2rem rgba(128, 128, 128, 0.25);
+    margin: 30px 30px 30px 15px;
+    width: calc(100% - 60px);
+    height: 100%;
+    background-color: rgba(0, 105, 217, 0.1);
+    border: 1px solid rgba(0, 105, 217, 0.3);
+}
+
+.boxtest
+{
+    display:flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    width: calc(100% - 60px);
+    margin: 30px;
+}
+
+.boxtest > h3
+{
+    color:#0069D9;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.btn-toggle
+{
+    display:inline-block;
+    background-color: #0069D9;
+    color:white;
+    font-size: 16px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 16px;
+    border-radius: 24px;
+    padding: 16px 16px;
+    text-align:center;
+}
+
+.notActiveBtnToggle {
+    display:inline-block;
+    background-color: #f6f6f6;
+    border-color: #f6f6f6;
+    color: gray;
+    cursor:default;
+}
+
+.btn-code-promo
+{
+    margin-top:16px;
+}
+
+@media screen and (max-width: 991px) {
+
+    /* générale */
+
+    .col-product
+    {
+        width: calc(100% - 30px);
+        margin:auto;
+    }
+    .col-order
+    {
+        width: calc(100% - 30px);
+        margin: auto;
+    }
+
+    .product-section
+    {
+        width: 100%;
+        height: 100%;
+        margin: 15px 0 7.5px 0;
+        padding: 0;
+    }
+
+    .product-order
+    {
+        width: 100%;
+        margin: 7.5px 0 0 0;
+        padding: 0px;
+    }
+
+    /*image */
+
+    .container-image
+    {
+       width: 100%;
+    }
+
+    .container-image img
+    {
+        width: calc(100% - 30px);
+        margin: 15px 15px 7.5px 15px;
+    }
+
+    /* description pizza */
+
+    .container-description
+    {
+        width: calc(100% - 30px);
+        margin: 0 15px;
+    }
+
+    .product-description
+    {
+        margin: 7.5px 0 0 0;
+        padding: 0px 30px;
+    }
+
+/* bouton ajout commande */
+
+    .flex-end
+    {
+        justify-content:center;
+        align-items: center;
+        height: 100px;
+    }
+
+    .btn-commande
+    {
+        margin: auto;
+    }
+
+    /* tableau de commande */
+
+    .container-table
+    {
+        padding: 15px 0;
+        width: calc(100% - 30px);
+        margin:7.5px 15px 30px 15px;
+    }
+
+    .product-admin
+    {
+        width: 100%;
+        margin: 15px auto;
+    }
+
+    .boxtest
+    {
+        width: calc(100% - 30px);
+        margin: 15px;
+    }
+
+  }
+  
